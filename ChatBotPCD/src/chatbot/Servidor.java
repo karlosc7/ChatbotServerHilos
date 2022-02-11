@@ -51,9 +51,9 @@ public class Servidor extends Thread {
 	public static void main(String[] args) {
 		try {
 			@SuppressWarnings("resource")
-			ServerSocket serverSocket = new ServerSocket(); // Creación del socket para activar servidor
+			ServerSocket serverSocket = new ServerSocket(); // CreaciÃ³n del socket para activar servidor
 			InetSocketAddress addr = new InetSocketAddress("localhost", 5555);
-			serverSocket.bind(addr); // Bind para conectar
+			serverSocket.bind(addr); // Bind para la escucha por ese puerto
 			HashMap<String, Socket> tabla_clientes = new HashMap<String, Socket>();
 			while (true) {
 				Socket newSocket = serverSocket.accept();
